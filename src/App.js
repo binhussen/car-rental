@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container, Grid } from "@mui/material";
+import React, { useState } from "react";
+import PrimarySearchAppBar from "./components/common/header";
+import Footer from "./components/common/footer";
+import OutlinedCard from "./components/Shared/car";
+import Home from './pages/home'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const currentYear = new Date().getFullYear();
+    const [year] = useState(currentYear)
+
+    return (
+        <Grid container direction="column">
+            <PrimarySearchAppBar />
+            <Container>
+                <OutlinedCard />
+                <Home />
+            </Container>
+            <Grid>
+                <Footer Year={year} />
+            </Grid>
+        </Grid>
+    );
 }
 
 export default App;
