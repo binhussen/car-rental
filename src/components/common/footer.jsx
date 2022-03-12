@@ -1,4 +1,3 @@
-import { Grid } from "@mui/material";
 
 const style = {
     borderTop: "1px solid #E7E7E7",
@@ -14,11 +13,10 @@ const style = {
 
 const footer = (props) => {
     return (
-        <Grid container>
-            <div style={style} className="container">
-                &copy; {props.Year}  This is footer
-            </div>
-        </Grid >
+        <div style={style} className="container">
+            &copy; {props.Year}  Abysinia auto inc.
+        </div>
+
     );
 }
 

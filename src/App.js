@@ -1,26 +1,34 @@
-import { Container, Grid } from "@mui/material";
-import React, { useState } from "react";
-import PrimarySearchAppBar from "./components/common/header";
-import Footer from "./components/common/footer";
-import OutlinedCard from "./components/Shared/car";
-import Home from './pages/home'
+import React from "react";
+import { Layout } from "antd";
+import { BrowserRouter } from "react-router-dom";
+import Navigation from "./components/common/navigation";
+// import CarouselDisplay from "./components/carousel/carousel";
+import CarDetails from "./components/car/Car.item";
+
+const { Content } = Layout;
 
 function App() {
-    const currentYear = new Date().getFullYear();
-    const [year] = useState(currentYear)
-
-    return (
-        <Grid container direction="column">
-            <PrimarySearchAppBar />
-            <Container>
-                <OutlinedCard />
-                <Home />
-            </Container>
-            <Grid>
-                <Footer Year={year} />
-            </Grid>
-        </Grid>
-    );
+  return (
+    <>
+      <BrowserRouter>
+        <Layout>
+          <Navigation />
+          {/* <div>
+            <CarouselDisplay />
+          </div> */}
+          <div style={{ padding: "0 50px", marginTop: 64, background: "#ffff" }}>
+          <Content 
+            className="site-layout">
+            <div style={{ padding: 24, minHeight: 380 }}>
+              <CarDetails name="Toyatoa-vitz" />
+              Content
+            </div>
+          </Content>
+          </div>
+        </Layout>
+      </BrowserRouter>
+    </>
+  );
 }
 
 export default App;
