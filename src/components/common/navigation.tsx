@@ -1,7 +1,7 @@
 import { Row, Col, Menu } from "antd";
 import { Header } from "antd/lib/layout/layout";
+import Link from "next/link";
 import React from "react";
-import { Link } from "react-router-dom";
 import { MenuItems, NavBarMenuItem } from "./menuItems";
 const navigation = () => {
   return (
@@ -24,7 +24,8 @@ const navigation = () => {
           >
             {MenuItems.map((item: NavBarMenuItem) => (
               <Menu.Item key={Math.random()}>
-                {item.title} <Link to={item.link} />
+                {item.title}
+                {/* <Link href={item.link} /> */}
               </Menu.Item>
             ))}
           </Menu>

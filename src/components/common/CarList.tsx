@@ -6,7 +6,7 @@ const CarList = ()=>{
     return <div>
                 <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                     {CarItems?.map((item) => (
-                        <Col className="gutter-row" span={6}>
+                        <Col className="gutter-row" span={6} key={Math.random()}>
                             <CarItem CarModel={item}/>
                         </Col>
                         ))}

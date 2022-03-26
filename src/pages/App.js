@@ -1,22 +1,20 @@
 import React from "react";
 import { Col, Layout, Row } from "antd";
-import { BrowserRouter } from "react-router-dom";
 // import { Input } from "antd";
 // import { SearchOutlined } from "@ant-design/icons";
-import Navigation from "./components/common/navigation";
+import Navigation from "../components/common/navigation";
   // import CarouselDisplay from "./components/carousel/carousel"
-import Footer from "./components/common/footer";
-import CarItem from "./components/car/Car.item";
+import Footer from "../components/common/footer";
+import CarItem from "../components/car/Car.item";
 // import CarDetails from "./components/car/Car.item";
-import { CarItems,CarModel } from "./components/common/CarItem";
-import CarList from "./components/common/CarList";
+import { CarItems,CarModel } from "../components/common/CarItem";
+import CarList from "../components/common/CarList";
 
 const { Content,Header } = Layout;
 
 function App() {
   return (
     <>
-      <BrowserRouter>
         <Layout>
           <Header style={{
           position: "fixed",
@@ -37,7 +35,6 @@ function App() {
 
           <Footer />
         </Layout>
-      </BrowserRouter>
     </>
   );
 }
