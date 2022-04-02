@@ -1,7 +1,19 @@
 import Link from "next/link";
 import classNames from "classnames";
+import { Button, Modal, Tooltip } from "antd";
+import { useState } from "react";
+import ProductDetailLayout from "./ProductDetailLayout";
 
-function Product({ data, className}) {
+function Product({ data, className }) {
+  
+  const [modalVisible, setModalVisible] = useState(false);
+  const showModal = () => {
+    setModalVisible(true);
+  };
+  const onModalClose = (e) => {
+    setModalVisible(false);
+  };
+
   return (
     <>
       <div className={`product ${classNames(className)}`}>
@@ -32,7 +44,27 @@ function Product({ data, className}) {
                 {data.discount && <del>{data.price}</del>}
               </h3>
             </div>
-          </div>
+            <div className="product-select">
+              <Tooltip title="Quick view">
+                <Button
+                  onClick={showModal}
+                  className="product-btn"
+                  type="primary"
+                  shape="round"
+                  icon={<i className="far fa-eye" />}
+                />
+              </Tooltip>
+            </div>
+      </div>
+      <Modal
+        visible={modalVisible}
+        onCancel={onModalClose}
+        footer={null}
+        header={null}
+        width={860}
+      >
+        <ProductDetailLayout style={{ marginBottom: 0 }} hideTab data={data} />
+      </Modal>
     </>
   );
 }
