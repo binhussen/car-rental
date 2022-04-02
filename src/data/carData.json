@@ -1,0 +1,38 @@
+{
+     "carData":{
+         "data":[
+             {
+                 "id":1,
+                 "category":"Toyota",
+                 "name":"vitz",
+                 "price":2000000,
+                 "discount":500,
+                 "shortDescription":"oyota Vittsu) is a three- and five-door subcompact hatchback",
+                 "fullDescription":"Toyota Vittsu) is a three- and five-door subcompact hatchback produced by the Japanese automobile manufacturer Toyota from 1999 to 2019.",
+                 "coverImage":"/assets/images/category/one/1.png",
+                 "images":["/assets/images/category/one/1.png", "/assets/images/category/one/2.png","/assets/images/category/one/3.png"],
+                 "specifications":{
+                     "color": "red",
+                     "status": "new"},
+                 "tag":["new", "00"]
+                },
+            {
+                 "id":1,
+                 "category":"Toyota",
+                 "name":"vitz",
+                 "price":2000000,
+                 "discount":500,
+                 "shortDescription":"oyota Vittsu) is a three- and five-door subcompact hatchback",
+                 "fullDescription":"Toyota Vittsu) is a three- and five-door subcompact hatchback produced by the Japanese automobile manufacturer Toyota from 1999 to 2019.",
+                 "coverImage":"/assets/images/category/one/1.png",
+                 "images":["/assets/images/category/one/1.png", "/assets/images/category/one/2.png","/assets/images/category/one/3.png"],
+                 "specifications":{
+                     "color": "red",
+                     "status": "new"},
+                 "tag":["new", "00"]
+                }
+         ],
+         "error":false,
+         "loading":false
+     }
+ }
