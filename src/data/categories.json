@@ -1,0 +1,46 @@
+{
+  "one": [
+    {
+      "image": {
+        "main": "/assets/images/category/one/1.png"
+      },
+      "title": "Toyota",
+      "quantity": 12
+    },
+    {
+      "image": {
+        "main": "/assets/images/category/one/2.png"
+      },
+      "title": "Hyundai",
+      "quantity": 8
+    },
+    {
+      "image": {
+        "main": "/assets/images/category/one/3.png"
+      },
+      "title": "Ford",
+      "quantity": 2
+    },
+    {
+      "image": {
+        "main": "/assets/images/category/one/4.png"
+      },
+      "title": "Nissan",
+      "quantity": 10
+    },
+    {
+      "image": {
+        "main": "/assets/images/category/one/3.png"
+      },
+      "title": "Ford",
+      "quantity": 2
+    },
+    {
+      "image": {
+        "main": "/assets/images/category/one/4.png"
+      },
+      "title": "Nissan",
+      "quantity": 10
+    }
+  ]
+}

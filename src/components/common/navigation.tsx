@@ -1,8 +1,6 @@
 import { Row, Col, Menu } from "antd";
-import { Header } from "antd/lib/layout/layout";
-import Link from "next/link";
-import React from "react";
-import { MenuItems, NavBarMenuItem } from "./menuItems";
+import { MenuItems, NavBarMenuItem } from "../../data/menuItems";
+
 const navigation = () => {
   return (
     <>

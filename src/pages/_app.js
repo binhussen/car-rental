@@ -1,16 +1,11 @@
 // import App from 'next/app'
 
-import Head from 'next/head'
 import './index.css';
+import "../styles/styles.scss";
 
 function MyApp({ Component, pageProps }) {
     return (
-        <>
-            <Head>
-                <title>My new cool app</title>
-            </Head>
-            <Component {...pageProps} />
-        </>
+        <Component {...pageProps} />
     )
 }
 

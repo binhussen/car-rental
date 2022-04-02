@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 /.next
+/src/styles/component
+/src/styles/pages
 
 # testing
 /coverage
