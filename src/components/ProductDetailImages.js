@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import classNames from "classnames";
 
-function ProductDetailImages({ type, images }) {
+function ProductDetailImages({ images }) {
   const slider1Settings = {
     arrows: false,
   };
@@ -10,14 +10,10 @@ function ProductDetailImages({ type, images }) {
     arrows: false,
     slidesToShow: 3,
     focusOnSelect: true,
-    vertical: type === "column" ? true : false,
-    // prevArrow: <PrevArrow />,
-    // nextArrow: <NextArrow />,
     responsive: [
       {
         breakpoint: 992,
         settings: {
-          vertical: type === "column" && false,
         },
       },
     ],
@@ -29,18 +25,10 @@ function ProductDetailImages({ type, images }) {
   // }
   return (
     <div
-      className={`product-detail-images ${classNames({
-        "-column": type === "column",
-      })}`}
+      className={`product-detail-images`}
     >
       <div className="product-detail-images-big">
         <Slider asNavFor={nav2} ref={(c) => setNav1(c)} {...slider1Settings}>
-          {/* {images &&
-            images.map((img, index) => (
-              <div key={index} className="slide-item">
-                <img src={img} alt="Product image" />
-              </div>
-            ))} */}
           {images &&
             images.slice(0,1).map((img, index) => (
               <div key={index} className="slide-item">
@@ -50,10 +38,10 @@ function ProductDetailImages({ type, images }) {
         </Slider>
       </div>
       <div className="product-detail-images-small">
-        <Slider asNavFor={nav1} ref={(c) => setNav2(c)} {...slider2Settings}>
+        <Slider asNavFor={nav1} ref={(c) => setNav2(c)} {...slider2Settings} >
           {images &&
             images.map((img, index) => (
-              <div key={index} className="slide-item">
+              <div key={index} className="slide-item" >
                 <img src={img} alt="Product image" />
               </div>
             ))}

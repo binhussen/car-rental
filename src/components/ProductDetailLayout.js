@@ -4,6 +4,7 @@ import ProductDetailImages from "./ProductDetailImages";
 import ProductDetailContent from "./ProductDetailContent";
 
 function ProductDetailLayout({ data, type, hideTab, style }) {
+  console.log(data);
   return (
     <div className="product-detail" style={style}>
       <Row gutter={30}>

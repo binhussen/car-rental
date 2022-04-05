@@ -3,7 +3,6 @@ import Category from "../components/common/category";
 import Container from "../components/common/container";
 import MainLayout from "../components/common/layout";
 import ProductTab from "../components/ProductTab";
-import CarList from "../components/Shared/CarList";
 import categoryData from "../data/categories.json";
 import categories from "../data/tabs.json"
 import products from "../data/carData.json"

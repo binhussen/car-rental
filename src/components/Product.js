@@ -3,6 +3,7 @@ import classNames from "classnames";
 import { Button, Modal, Tooltip } from "antd";
 import { useState } from "react";
 import ProductDetailLayout from "./ProductDetailLayout";
+import router from 'next/router';
 
 function Product({ data, className }) {
   
@@ -19,8 +20,8 @@ function Product({ data, className }) {
       <div className={`product ${classNames(className)}`}>
             <div className="product-img">
               <Link
-                href={process.env.PUBLIC_URL + `/product/[slug]`}
-                as={process.env.PUBLIC_URL + `/product/${data.slug}`}
+                href={`/product/[slug]`}
+                as={`/product/${data.id}`}
               >
                 <a title={data.name}>
                   <img src={data.coverImage} alt="Product image" />
@@ -30,8 +31,8 @@ function Product({ data, className }) {
             <div className="product-content">
               <h5 className="product-type">{data.category}</h5>
               <Link
-                href={process.env.PUBLIC_URL + `/product/[slug]`}
-                as={process.env.PUBLIC_URL + `/product/${data.slug}`}
+                href={ `/product/[slug]`}
+                as={`/product/${data.id}`}
               >
                 <a className="product-name" title="Pure Pineapple">
                   {data.name}
