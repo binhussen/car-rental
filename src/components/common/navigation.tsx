@@ -5,17 +5,22 @@ const navigation = () => {
   return (
     <>
       <Row>
-        <Col span={8}>
-          <h1 style={{ color: "white" }}>አቢሲኒያ auto</h1>
+        <Col span={6}>
+          <div style={{display:"flex"}}>
+          <img 
+                  src="/assets/images/logo/logo.jpg"
+                  alt="Ogami logo"
+                />
+            <h2 style={{ color: "#053A7F" , paddingLeft:"1em",}}>አቢሲኒያ auto</h2></div>
         </Col>
-        <Col span={8} offset={8}>
+        <Col span={10} offset={8}>
           <Menu
             style={{
               display: "flex",
               alignItems: "center",
               justifyContent: "stretch",
-              background: "#053A7F",
-              color: "white",
+              background: "white",
+              color: "#053A7F",
             }}
             theme="light"
             mode="horizontal"

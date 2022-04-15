@@ -1,24 +1,16 @@
-
-const style = {
-    borderTop: "1px solid #E7E7E7",
-    padding: "10px 10px",
-    position: "fixed",
-    left: "0",
-    bottom: "0",
-    height: "80px",
-    width: "100%",
-    background:'red',
-    display:'flex',
-    alignItems:'center',
-    background: "#E7E7E7"
-};
+import { Row } from "antd";
+import classNames from "classnames";
+import Container from "./container";
 
 const footer = (props) => {
     return (
-        <div   style={style} className="container">
-            &copy; {props.Year}  Abysinia auto inc.
-        </div>
-
+        <div className="footer-bottom">
+           <Container>
+                <div className="footer-bottom__wrapper container">
+                    <p> &copy; {props.Year}  Abysinia auto inc.</p>
+                </div>
+            </Container>
+        </div>     
     );
 }
 
