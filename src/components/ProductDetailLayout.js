@@ -2,9 +2,9 @@ import React from "react";
 import { Col, Row } from "antd";
 import ProductDetailImages from "./ProductDetailImages";
 import ProductDetailContent from "./ProductDetailContent";
+import ProductDetailTab from "./ProductDetailTab";
 
 function ProductDetailLayout({ data, type, hideTab, style }) {
-  console.log(data);
   return (
     <div className="product-detail" style={style}>
       <Row gutter={30}>
@@ -14,6 +14,15 @@ function ProductDetailLayout({ data, type, hideTab, style }) {
         <Col md={12}>
           <ProductDetailContent data={data} />
         </Col>
+        <Col md={24}>
+            {!hideTab && (
+              <ProductDetailTab
+                fullDescription={data.fullDescription}
+                specifications={data.specifications}
+                reviews={data.reviews}
+              />
+            )}
+          </Col>
       </Row>
     </div>
   );

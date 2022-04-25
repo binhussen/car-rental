@@ -6,6 +6,9 @@ import ProductTab from "../components/ProductTab";
 import categoryData from "../data/categories.json";
 import categories from "../data/tabs.json"
 import products from "../data/carData.json"
+import SectionTitle from "../components/SectionTitle";
+import BannerSlider from "../components/common/bannerSlider";
+import Banner from '../data/banner.json';
 
 function App() {
   const [currentProductTabsCategory, setCurrentProductTabsCategory] = useState({
@@ -13,8 +16,24 @@ function App() {
   });
   return (
     <MainLayout title="My new cool app">
-      <Category data={categoryData.one} />
+      <BannerSlider data={Banner.one} />
+      {/* <SectionTitle
+            title={"Find the Car You Want, Your Way"}
+            className="-center"
+            hideDecoration={true}
+      />
+      <div className="center"><div style={{
+        display: "flex",
+        justifyContent: "center",
+        maxWidth: "492px",
+        marginLeft: "7em",
+        marginRight: "7em"
+      }}>
+      <div className="product-detail-content__delivery row">Shop New</div>
+        <div className="product-detail-content__delivery">Shop Used</div></div>
+        <div className="product-detail-content__delivery">Sell Your Car</div></div> */}
       <Container>
+        <Category data={categoryData.one} />
         <ProductTab
           data={products}
           productCol={{ xs: 12, sm: 8, lg: 6 }}

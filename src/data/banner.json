@@ -1,0 +1,22 @@
+{
+  "one": [
+    {
+      "background": "/assets/images/category/bg-1.png",
+      "subTitle": "Then, build your deal to fit your needs.",
+      "title": "Find the Car You Want, Your Way",
+      "price": {
+        "main": "14",
+        "unit": "pakage"
+      }
+    },
+    {
+      "background": "/assets/images/category/bg-2.png",
+      "subTitle": "Butter & Eggs",
+      "title": "Spice 100% Oganic",
+      "price": {
+        "main": "16",
+        "unit": "pakage"
+      }
+    }
+  ]
+}

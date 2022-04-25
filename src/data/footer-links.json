@@ -1,0 +1,17 @@
+[
+  {
+    "title": "INFORMATION",
+    "items": [
+      { "title": "Home", "href": "#" },
+      { "title": "Featured", "href": "#" },
+      { "title": "Dealers", "href": "#" }
+    ]
+  },
+  {
+    "title": "MY ACCOUNT",
+    "items": [
+      { "title": "My account", "href": "#" },
+      { "title": "Contact", "href": "#" }
+    ]
+  }
+]
