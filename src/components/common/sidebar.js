@@ -1,31 +1,87 @@
 import React from "react";
 import classNames from "classnames";
-import { Button } from "antd";
+import { Button, Slider, Switch } from "antd";
 
 import categories from '../../data/tabs.json'
 
 const data = {
-  color: [
-    { name: "All colors", colorCode: "#FFF", value: "" },
-    { name: "Black", colorCode: "#000", value: "black" },
-    { name: "Blue", colorCode: "#1e73be", value: "blue" },
-    { name: "Gray", colorCode: "#848484", value: "gray" },
-    { name: "Green", colorCode: "#81D742", value: "green" },
-    { name: "Red", colorCode: "#DD3333", value: "red" },
-    { name: "Yellow", colorCode: "#eeee22", value: "yellow" },
+  Brand: [
+    {name: "Acura"},
+    {name: "Alfa Romeo"},
+    {name: "AM General"},
+    {name: "Aston "},
+    {name: "Audi"},
+    {name: "Bentley"},
+    {name: "BMW"},
+    {name: "Buick"},
+    {name: "Cadillac"},
+    {name: "Chevrolet"},
+    {name: "Chrysler"},
+    {name: "Dodge"},
+    {name: "Ferrari"},
+    {name: "FIAT"},
+    {name: "Fisker"},
+    {name: "Ford"},
+    {name: "Freightliner"},
+    {name: "Genesis"},
+    { name: "GMC"},
+    { name: "Honda"},
+    { name: "HUMMER"},
+    { name: "Hyundai"},
+    { name: "INFINITI"},
+    { name: "Isuzu"},
+    { name: "Jaguar"},
+    { name: "Jeep"},
+    { name: "Karma"},
+    { name: "Kia"},
+    { name: "Lamborghini"},
+    { name: "Land Rover"},
+    { name: "Lexus"},
+    { name: "Lincoln"},
+    { name: "Lotus"},
+    { name: "Lucid"},
+    { name: "Maserati"},
+    { name: "Maybach"},
+    { name: "Mazda"},
+    { name: "McLaren"},
+    { name: "Mercedes-Benz"},
+    { name: "Mercury"},
+    { name: "MINI"},
+    { name: "Mitsubishi"},
+    { name: "Nissan"},
+    { name: "Oldsmobile"},
+    { name: "Plymouth"},
+    { name: "Polestar"},
+    { name: "Pontiac"},
+    { name: "Porsche"},
+    { name: "Ram"},
+    { name: "Rivian"},
+    { name: "Rolls-Royce"},
+    { name: "Saab"},
+    { name: "Saturn"},
+    { name: "Scion"},
+    { name: "smart"},
+    { name: "Volvo"},
+    { name: "Subaru"},
+    { name: "Suzuki"},
+    { name: "Tesla"},
+    { name: "Toyota"},
+    { name: "Volkswagen"}
   ],
-  size: [
-    { name: "All size", value: "" },
-    { name: "XL", value: "xl" },
-    { name: "L", value: "l" },
-    { name: "M", value: "m" },
-    { name: "S", value: "s" },
+  Type: [
+    { name: "Convertibles"},
+    { name: "Coupes"},
+    { name: "SUVs"},
+    { name: "Sedans"},
+    { name: "Trucks"},
+    { name: "Vans"},
+    { name: "Wagons"},
+    { name: "Hatchbacks"},
+    { name: "Hybrids"},
+    { name: "Electrics" },
   ],
   tags: [
-    { name: "All tag", value: "" },
-    { name: "fresh", value: "fresh" },
-    { name: "vegetable", value: "vegetable" },
-    { name: "meat", value: "meat" },
+    { name: "All tag", value: "" }
   ],
 };
 
@@ -55,12 +111,11 @@ function Sidebar({ showShortcut, style }) {
   };
   return (
     <div style={style} className="shop-sidebar">
-      <SidebarSection className="-departments" title="Departments">
+      <SidebarSection className="-departments" title="Brands">
         <ul>
-          {/* <li className={classNames({ active: category === "" })}> */}
           <li>
             <a onClick={(e) => onChooseCategory(e, "")} href="#">
-              All departments
+              All Brands
             </a>
           </li>
           {categories.map((item, index) => (
@@ -75,43 +130,8 @@ function Sidebar({ showShortcut, style }) {
           ))}
         </ul>
       </SidebarSection>
-      {!showShortcut && (
-        <>
-          <SidebarSection className="-colors" title="Popular colors">
-            <ul>
-              {data.color.map((item, index) => (
-                <li
-                  className={classNames({ active: color === item.value })}
-                  key={index}
-                >
-                  <a onClick={(e) => onChooseColor(e, item.value)} href="#">
-                    <span style={{ backgroundColor: item.colorCode }}></span>
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </SidebarSection>
-
-          <SidebarSection className="-size" title="Popular size">
-            <ul>
-              {data.size.map((item, index) => (
-                <li
-                  className={classNames({ active: size === item.value })}
-                  key={index}
-                >
-                  <a onClick={(e) => onChooseSize(e, item.value)} href="#">
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </SidebarSection>
-        </>
-      )}
-
-      <SidebarSection className="-tags" title="Popular tags">
-        {data.tags.map((item, index) => (
+      <SidebarSection className="-tags" title="Type">
+        {data.Brand.map((item, index) => (
           <Button
             // className={classNames({ active: tag === item.value })}
             onClick={() => onChooseTag(item.value)}
@@ -120,6 +140,9 @@ function Sidebar({ showShortcut, style }) {
             {item.name}
           </Button>
         ))}
+      </SidebarSection>
+      <SidebarSection className="-tags" title="Price">
+        <Slider range defaultValue={[500000, 30000000]}/>
       </SidebarSection>
     </div>
   );

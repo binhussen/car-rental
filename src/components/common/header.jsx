@@ -5,12 +5,12 @@ import Navigation from "./navigation";
 
 function MainHeader() {
   return (
-    <div className="menu -style-one">
+    <div className="menu -style-one" style={{backgroundColor:"#f5f5f5"}}>
       <Container>
         <Header style={{
           // position: "fixed",
           color: "#ffff",
-          background: "white",
+          background: "#f5f5f5",
           zIndex: 100,
           width: "100%",
           boxShadow: "5px 0 1px 0",

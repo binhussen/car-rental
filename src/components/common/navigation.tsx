@@ -9,7 +9,7 @@ const navigation = () => {
           <div style={{display:"flex"}}>
           <img 
                   src="/assets/images/logo/logo.jpg"
-                  alt="Ogami logo"
+                  alt="አቢሲኒያ logo"
                 />
             <h2 style={{ color: "#053A7F" , paddingLeft:"1em",}}>አቢሲኒያ auto</h2></div>
         </Col>
@@ -19,7 +19,7 @@ const navigation = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "stretch",
-              background: "white",
+              background: "#f5f5f5",
               color: "#053A7F",
             }}
             theme="light"

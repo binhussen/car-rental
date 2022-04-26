@@ -1,4 +1,5 @@
 import { Button, Col, Rate, Row, message } from "antd";
+import Link from "next/link";
 import SocialIcons from "./Shared/SocialIcons";
 
 export default function ProductDetailContent({ data, type }) {
@@ -11,7 +12,10 @@ export default function ProductDetailContent({ data, type }) {
         {data.fullDescription}.
         {data.shortDescription}.
       </p>
-      <div className="product-detail-content__delivery">Free delivery</div>
+      <Link
+                href={ `/product/[slug]`}
+                as={`/product/${data.id}`}
+              ><div className="product-detail-content__delivery">Detail</div></Link>
       <h3 className="product-detail-content__price">
         {data.discount && <del>{data.price}</del>}
         <div className="product-detail-content__price-discount">
