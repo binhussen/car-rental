@@ -19,7 +19,7 @@ const navigation = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "stretch",
-              background: "white",
+              background: "#f5f5f5",
               color: "#053A7F",
             }}
             theme="light"

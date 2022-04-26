@@ -6,7 +6,7 @@ import FooterQuickLinks from "./FooterQuickLinks";
 
 const footer = (props) => {
     return (
-        <div className={`footer -style-one`}>
+        <div className={`footer -style-one`} style={{backgroundColor:"#f5f5f5"}}>
             <div className="footer-top">
                 <Container>
                 <Row gutter={15}>
@@ -19,7 +19,7 @@ const footer = (props) => {
                 </Row>
                 </Container>
             </div>
-            <div className="footer-bottom">
+            <div className="footer-bottom" style={{backgroundColor:"#ebebeb"}}>
             <Container>
                     <div className="footer-bottom__wrapper container">
                         <p> &copy; {props.Year}  Abysinia auto inc.</p>

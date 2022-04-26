@@ -55,7 +55,7 @@ function BannerSlider({ data }) {
             className={`slick-slider-item ${classNames({
               active: index === currentSlideIndex,
             })}`}
-          >
+          >{console.log(index === currentSlideIndex)}
             <div className="hero-slider-background">
               <img
                 src={item.background}
