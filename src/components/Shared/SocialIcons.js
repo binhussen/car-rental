@@ -1,23 +1,24 @@
 import React from "react";
 import classNames from "classnames";
 import { Button } from "antd";
+import {FacebookOutlined,TwitterOutlined,LinkedinOutlined} from '@ant-design/icons';
 
 export default function SocialIcons({ className, type = "link", shape }) {
   return (
     <ul className={`social-icons ${classNames(className)}`}>
       <li>
         <Button type={type} shape={shape} href="#">
-          <i className="fab fa-facebook-f"></i>
+          <FacebookOutlined />
         </Button>
       </li>
       <li>
         <Button type={type} shape={shape} href="#">
-          <i className="fab fa-twitter"></i>
+        <TwitterOutlined />
         </Button>
       </li>
       <li>
         <Button type={type} shape={shape} href="#">
-          <i className="fab fa-invision"></i>
+        <LinkedinOutlined />
         </Button>
       </li>
     </ul>

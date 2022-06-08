@@ -5,19 +5,17 @@ import Navigation from "./navigation";
 
 function MainHeader() {
   return (
-    <div className="menu -style-one" style={{backgroundColor:"#f5f5f5"}}>
+    <div className="menu -style-one" style={{backgroundColor:"#1890ff",marginBottom:"-60px"}}>
       <Container>
-        <Header style={{
-          // position: "fixed",
-          color: "#ffff",
-          background: "#f5f5f5",
+        {/* <Header style={{
+          color: "#1890ff",
+          background: "#1890ff",
           zIndex: 100,
           width: "100%",
           boxShadow: "5px 0 1px 0",
-          // marginBottom:"20px"
-        }} >
+          marginBottom:"-80px"
+        }} > */}
           <Navigation />
-        </Header>
         </Container>
       </div>
     );

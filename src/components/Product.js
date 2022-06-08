@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { Button, Modal, Tooltip } from "antd";
 import { useState } from "react";
 import ProductDetailLayout from "./ProductDetailLayout";
-import router from 'next/router';
+import {EyeOutlined} from '@ant-design/icons';
 
 function Product({ data, className }) {
   
@@ -23,7 +23,7 @@ function Product({ data, className }) {
                 href={`/product/[slug]`}
                 as={`/product/${data.id}`}
               >
-                <a title={data.name}>
+                <a title={data.bodyType}>
                   <img src={data.coverImage} alt="Product image" />
                 </a>
               </Link>
@@ -35,15 +35,20 @@ function Product({ data, className }) {
                 as={`/product/${data.id}`}
               >
                 <a className="product-name" title="Pure Pineapple">
-                  {data.name}
+                  {data.bodyType}
                 </a>
               </Link>
               <h3 className="product-price">
                 {data.discount
                   ? data.price - data.discount
-                  : data.price}
+                  : data.price}ብር
                 {data.discount && <del>{data.price}</del>}
               </h3>
+              <p>
+                {data.specifications.year}|
+                {data.specifications.engineType}|
+                {data.specifications.condition}
+              </p>
             </div>
             <div className="product-select">
               <Tooltip title="Quick view">
@@ -52,7 +57,7 @@ function Product({ data, className }) {
                   className="product-btn"
                   type="primary"
                   shape="round"
-                  icon={<i className="far fa-eye" />}
+                  icon={<EyeOutlined />}
                 />
               </Tooltip>
             </div>

@@ -11,7 +11,7 @@ function MainLayout({ title, children, headerClass }) {
       <Head>
         <title>{title}</title>
       </Head>
-      <ScrolledHeader className={headerClass} />
+      <ScrolledHeader />
       {children}
       <Footer/>
     </>

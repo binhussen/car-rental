@@ -7,7 +7,7 @@ export default function ProductDetailContent({ data, type }) {
   return (
     <div className="product-detail-content">
       <h5 className="product-type">{data.category}</h5>
-      <h2 className="product-detail-content__name">{data.name}</h2>
+      <h2 className="product-detail-content__name">{data.bodyType}</h2>
       <p className="product-detail-content__description">
         {data.fullDescription}.
         {data.shortDescription}.
@@ -17,12 +17,12 @@ export default function ProductDetailContent({ data, type }) {
                 as={`/product/${data.id}`}
               ><div className="product-detail-content__delivery">Detail</div></Link>
       <h3 className="product-detail-content__price">
-        {data.discount && <del>{data.price}</del>}
+        {data.discount && <del>{data.price} ብር</del>}
         <div className="product-detail-content__price-discount">
           <h5>
             {data.discount
               ? (data.price - data.discount)
-              : (data.price)}
+              : (data.price)} ብር
           </h5>
           <span>
             <Rate defaultValue={data.rate} />

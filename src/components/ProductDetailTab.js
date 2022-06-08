@@ -49,24 +49,15 @@ function ProductDetailTab({ fullDescription, specifications, reviews }) {
                 </tr>
                 <tr>
                   <td>Type</td>
-                  <td>
-                  </td>
+                  <td>{}</td>
                 </tr>
                 <tr>
                   <td>Engine Type</td>
-                  <td>{specifications.color}</td>
-                </tr>
-                <tr>
-                  <td>Location</td>
-                  <td>{specifications.size}</td>
-                </tr>
-                <tr>
-                  <td>Date</td>
-                  <td>{specifications.color}</td>
+                  <td>{specifications.engineType}</td>
                 </tr>
                 <tr>
                   <td>Transmission</td>
-                  <td>{specifications.size}</td>
+                  <td>{specifications.transmission}</td>
                 </tr>
                 <tr>
                   <td>Color</td>
@@ -74,7 +65,7 @@ function ProductDetailTab({ fullDescription, specifications, reviews }) {
                 </tr>
                 <tr>
                   <td>Condition</td>
-                  <td>{specifications.size}</td>
+                  <td>{specifications.condition}</td>
                 </tr>
                 <tr>
                   <td>Body Type</td>

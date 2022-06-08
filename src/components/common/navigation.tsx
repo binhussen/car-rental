@@ -11,7 +11,7 @@ const navigation = () => {
                   src="/assets/images/logo/logo.jpg"
                   alt="አቢሲኒያ logo"
                 />
-            <h2 style={{ color: "#053A7F" , paddingLeft:"1em",}}>አቢሲኒያ auto</h2></div>
+            <h2 style={{ color: "#1890ff" , paddingLeft:"1em",}}>አቢሲኒያ auto</h2></div>
         </Col>
         <Col span={10} offset={8}>
           <Menu
@@ -19,8 +19,8 @@ const navigation = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "stretch",
-              background: "#f5f5f5",
-              color: "#053A7F",
+              background: "#1890ff",
+              color: "#fff",
             }}
             theme="light"
             mode="horizontal"

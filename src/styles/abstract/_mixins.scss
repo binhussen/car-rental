@@ -22,7 +22,7 @@
 
 @mixin link(
   $color: setShadeColor(dark),
-  $hvr-color: setColor(green),
+        $hvr-color: setColor(green),
   $fsz: 1em,
   $fw: normal,
   $lh: 1,

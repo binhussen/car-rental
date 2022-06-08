@@ -49,7 +49,7 @@ function BannerSlider({ data }) {
         className="arrow-center"
         {...settings}
       >
-        {data.map((item, index) => (
+        {data.slice(0,1).map((item, index) => (
           <div
             key={index}
             className={`slick-slider-item ${classNames({

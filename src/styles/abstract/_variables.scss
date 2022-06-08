@@ -1,8 +1,10 @@
 $root-color: (
-  green: #88c74a,
+        // green: #88c74a,
+        green: #1890ff,
   pink: #fd5f5c,
   coffee: #f79823,
   light: #eaeff4,
+                blue:#1890ff
 );
 
 $colors: (
@@ -10,6 +12,7 @@ $colors: (
   pink: var(--pink-color),
   coffee: var(--coffee-color),
   light: var(--light-color),
+                blue: var(--blue-color),
 );
 
 $shades: (
